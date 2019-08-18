@@ -292,8 +292,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1769731634}
   m_HandleRect: {fileID: 2031953771}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1430,6 +1430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1668247170}
+  - component: {fileID: 1668247171}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -1460,6 +1461,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.8}
   m_SizeDelta: {x: 303.4, y: 432}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1668247171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668247169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7778112550d7248a85fc924b3ece0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d38e235c68f47d84380445af200746e9, type: 2}
 --- !u!1 &1677397784
 GameObject:
   m_ObjectHideFlags: 0
