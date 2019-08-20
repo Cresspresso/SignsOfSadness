@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b08a3d3e15ca5dc42b40e2fc16d6a1f1
+guid: 9e3877b3e0d1bbc46a488d1cf60384ad
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Sui_Dummy
+    100000: Sui_Dummy
+    100002: //RootNode
     100004: SuiAttempter_BONESHead
     100006: SuiAttempter_BONESLCalf
     100008: SuiAttempter_BONESLCollarbone
@@ -32,8 +32,8 @@ ModelImporter:
     100052: SuiAttempter_BONESSpine2
     100054: SuiAttempter_BONESSpine3
     100056: SuiAttempter_BONESSpine4
-    400000: //RootNode
-    400002: Sui_Dummy
+    400000: Sui_Dummy
+    400002: //RootNode
     400004: SuiAttempter_BONESHead
     400006: SuiAttempter_BONESLCalf
     400008: SuiAttempter_BONESLCollarbone
@@ -63,7 +63,7 @@ ModelImporter:
     400056: SuiAttempter_BONESSpine4
     2100000: lambert1
     4300000: Sui_Dummy
-    7400000: CryingIDLE
+    7400000: StepScare_IDLE
     9500000: //RootNode
     13700000: Sui_Dummy
   externalObjects: {}
@@ -95,7 +95,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CryingIDLE
+      name: StepScare_IDLE
       takeName: Take 001
       firstFrame: 0
       lastFrame: 60
