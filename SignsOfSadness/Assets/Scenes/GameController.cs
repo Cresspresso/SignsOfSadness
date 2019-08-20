@@ -7,8 +7,16 @@ public class GameController : MonoBehaviour
 {
 	public Slider pointsSlider;
 	public float fallHalfWidth;
+    public bool isGameInProgress = true;
+    public GameObject GoodTextPrefab;
+    public GameObject BadTextPrefab;
+    public Transform TextParent;
 
-	void Start ()
+    private static readonly string[] goodWords = new string[] {
+
+    };
+
+    void Start ()
 	{
 		pointsSlider.value = pointsSlider.minValue;
 
@@ -20,6 +28,8 @@ public class GameController : MonoBehaviour
 		var player = FindObjectOfType<Player>();
 		player.limits.xMax = fallHalfWidth;
 		player.limits.xMin = -fallHalfWidth;
+
+        StartCoroutine(WordSpawner());
 	}
 
 	public void OnPickingUp(Pickup pickup)
@@ -40,5 +50,21 @@ public class GameController : MonoBehaviour
 			default:
 				break;
 		}
+
+        if (pointsSlider.value == pointsSlider.maxValue)
+        {
+            Debug.Log("Finished!");
+        }
 	}
+
+    IEnumerator WordSpawner()
+    {
+        while (isGameInProgress)
+        {
+            var go = Instantiate(GoodTextPrefab, TextParent, false);
+            go.transform.localPosition = new Vector3(Random.Range(-200, 200), 900, 0);
+            go.name = GoodTextPrefab.name + " instantiated";
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
 }
