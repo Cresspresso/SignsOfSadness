@@ -12,9 +12,44 @@ public class GameController : MonoBehaviour
     public GameObject BadTextPrefab;
     public Transform TextParent;
 
-    private static readonly string[] goodWords = new string[] {
-
-    };
+    private static readonly string[] goodWords = @"absolutely
+accepted
+achievement
+action
+active
+adventure
+awesome
+brave
+beautiful
+believe
+brilliant
+champion
+cool
+composed
+charming
+delight
+fantastic
+fun
+friendly
+Funny
+gorgeous
+great
+happy
+kind
+lively
+lovely
+meaningful
+nice
+optimistic
+pretty
+positive
+perfect
+quality
+skillful
+stunning
+smile
+special
+terrific".Split('\n');
 
     void Start ()
 	{
@@ -64,6 +99,7 @@ public class GameController : MonoBehaviour
             var go = Instantiate(GoodTextPrefab, TextParent, false);
             go.transform.localPosition = new Vector3(Random.Range(-200, 200), 900, 0);
             go.name = GoodTextPrefab.name + " instantiated";
+            go.GetComponent<UnityEngine.UI.Text>().text = goodWords[Random.Range(0, goodWords.Length - 1)];
             yield return new WaitForSeconds(1.0f);
         }
     }
