@@ -104,6 +104,12 @@ worthless".Split('\n');
         StartCoroutine(WordSpawner());
 	}
 
+    void Update ()
+    {
+        if(Input.GetKey("escape"))
+        { Application.Quit(); }
+    }
+
 	public void OnPickingUp(Pickup pickup)
 	{
 		Destroy(pickup.gameObject);
