@@ -1504,8 +1504,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 806d1e9b8806e5947b94f300481aa242, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -1540,8 +1540,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 0.47058824}
-    m_HighlightedColor: {r: 0.7264151, g: 0.17760488, b: 0, a: 1}
+    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.24324325, b: 0, a: 1}
     m_PressedColor: {r: 0.5754717, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0.5176471}
     m_ColorMultiplier: 1
@@ -19034,8 +19034,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 806d1e9b8806e5947b94f300481aa242, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -19070,8 +19070,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 0.47058824}
-    m_HighlightedColor: {r: 0.7264151, g: 0.17760488, b: 0, a: 1}
+    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.24324325, b: 0, a: 1}
     m_PressedColor: {r: 0.5754717, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0.5176471}
     m_ColorMultiplier: 1
@@ -25268,8 +25268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 109}
-  m_SizeDelta: {x: 440, y: 133}
+  m_AnchoredPosition: {x: 0, y: 133}
+  m_SizeDelta: {x: 440, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658024125
 MonoBehaviour:
@@ -25291,8 +25291,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ddc37aabb65f43b41bf1c24258f4344d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -36227,8 +36227,8 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 0.47058824}
-    m_HighlightedColor: {r: 0.7264151, g: 0.17760488, b: 0, a: 1}
+    m_NormalColor: {r: 0.7169812, g: 0.06292528, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.24324325, b: 0, a: 1}
     m_PressedColor: {r: 0.5754717, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 0.5176471}
     m_ColorMultiplier: 1
@@ -36269,8 +36269,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 806d1e9b8806e5947b94f300481aa242, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0

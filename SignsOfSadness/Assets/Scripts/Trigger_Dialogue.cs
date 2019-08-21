@@ -14,7 +14,7 @@ public class Trigger_Dialogue : MonoBehaviour
 
     IEnumerator BeginThings()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5f);
         UIObject.SetActive(true);
     }
 }

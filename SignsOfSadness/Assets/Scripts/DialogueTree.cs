@@ -144,6 +144,7 @@ public class DialogueTree : MonoBehaviour
             node76.prompt = "It's good to have someone who listens.";
             node76.choices[2] = "[Win the Game]";
             node76.options[2] = goToMenuNode;
+            node76.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
@@ -212,6 +213,7 @@ public class DialogueTree : MonoBehaviour
             node62.prompt = "Maybe you're right.";
             node62.choices[2] = "[End]";
             node62.options[2] = goToMenuNode;
+            node62.onLoad = () => animator.SetTrigger("NodNO");
 
             node63.prompt = "I know, I know. But sometimes I just wish that things could be a bit easier.";
             node63.choices[0] = "...";
@@ -222,10 +224,12 @@ public class DialogueTree : MonoBehaviour
             node60.prompt = "Maybe you're right.";
             node60.choices[2] = "[End]";
             node60.options[2] = goToMenuNode;
+            node60.onLoad = () => animator.SetTrigger("NodYES");
 
             node61.prompt = "Yes but for the years I have put into this company I expect some things to have reached my expectations.";
             node61.choices[0] = "...";
             node61.options[0] = node18;
+            node60.onLoad = () => animator.SetTrigger("NodYesThenNo");
         }
 
         {
@@ -529,7 +533,7 @@ public class DialogueTree : MonoBehaviour
             node09.prompt = "I tried. My boss won't let me.";
             node09.choices[0] = "...";
             node09.options[0] = node10;
-
+            node09.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
@@ -572,7 +576,7 @@ public class DialogueTree : MonoBehaviour
             node04.options[1] = node35;
             node04.choices[2] = "Are you struggling with something?";
             node04.options[2] = node05;
-
+            node04.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
@@ -589,14 +593,13 @@ public class DialogueTree : MonoBehaviour
             node02.prompt = "Yeah, I'm okay thanks.";
             node02.choices[0] = "You don't look alright.";
             node02.options[0] = node03;
-            node02.onLoad = () => animator.SetTrigger("LookToStanding");
+            node02.onLoad = () => animator.SetTrigger("CryingToLook");
         }
 
         {
             rootNode.prompt = "*Crying silently*";
             rootNode.choices[0] = "Hey, are you alright?";
             rootNode.options[0] = node02;
-            rootNode.onLoad = () => animator.SetTrigger("CryingToLook");
         }
 
         loadNode();
