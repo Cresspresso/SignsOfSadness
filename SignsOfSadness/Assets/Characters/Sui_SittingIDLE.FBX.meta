@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd294a3cabf33a1478608cd4cec25168
+guid: c76cdbf92205e034e8b42449fc111159
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -63,7 +63,7 @@ ModelImporter:
     400056: SuiAttempter_BONESSpine4
     2100000: lambert1
     4300000: Sui_Dummy
-    7400000: KneelReach_IDLE
+    7400000: Sitting_IDLE
     9500000: //RootNode
     13700000: Sui_Dummy
   externalObjects: {}
@@ -95,17 +95,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: KneelReach_IDLE
+      name: Sitting_IDLE
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -128,7 +128,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -153,9 +152,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

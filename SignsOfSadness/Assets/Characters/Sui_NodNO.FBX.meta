@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 177e2b9be77fa21438dc8cdf67b32414
+guid: dbe52762ad5da2f41a02373a027dabf3
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -63,7 +63,7 @@ ModelImporter:
     400056: SuiAttempter_BONESSpine4
     2100000: lambert1
     4300000: Sui_Dummy
-    7400000: StepScare
+    7400000: Nod_NO
     9500000: //RootNode
     13700000: Sui_Dummy
   externalObjects: {}
@@ -95,10 +95,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: StepScare
+      name: Nod_NO
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 160
+      lastFrame: 72
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -128,7 +128,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -153,9 +152,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
