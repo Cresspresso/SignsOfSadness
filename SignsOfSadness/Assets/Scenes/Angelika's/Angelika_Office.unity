@@ -2503,6 +2503,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
@@ -2570,6 +2574,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
@@ -8215,6 +8223,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
@@ -8277,6 +8289,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
@@ -8557,6 +8573,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
@@ -8932,6 +8952,10 @@ Prefab:
       propertyPath: m_Name
       value: Chair (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e32b1e2c1e458d41ac4b8763d26b8dc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf90458b90af624c804471c800c4e5d, type: 3}
   m_IsPrefabAsset: 0
