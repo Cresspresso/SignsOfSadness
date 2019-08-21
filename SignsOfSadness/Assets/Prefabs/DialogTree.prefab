@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 114988532723039908}
   - component: {fileID: 114056474739058032}
   - component: {fileID: 114269451864626222}
+  - component: {fileID: 114679272587700084}
   m_Layer: 5
   m_Name: DialogTree
   m_TagString: Untagged
@@ -349,7 +350,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.1254902}
     m_HighlightedColor: {r: 0, g: 0.3962264, b: 0.0031077052, a: 0.46666667}
     m_PressedColor: {r: 0, g: 1, b: 0.15395617, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -368,18 +369,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114474733730028234}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: onButtonClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114055228653347774
@@ -452,7 +442,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.1254902}
     m_HighlightedColor: {r: 0, g: 0.3962264, b: 0.0031077052, a: 0.46666667}
     m_PressedColor: {r: 0, g: 1, b: 0.15395617, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -471,18 +461,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114739272982094158}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: onButtonClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114194305435908458
@@ -810,7 +789,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.1254902}
     m_HighlightedColor: {r: 0, g: 0.3962264, b: 0.0031077052, a: 0.46666667}
     m_PressedColor: {r: 0, g: 1, b: 0.15395617, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -829,18 +808,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114543003033489622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: onButtonClicked
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114410154133882196
@@ -878,7 +846,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -976,7 +944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Excuse me are you ok?
+  m_Text: 124124
 --- !u!114 &114508687167681004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1009,7 +977,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: (Say Nothing)
+  m_Text: ' 12124'
 --- !u!114 &114543003033489622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1152,6 +1120,22 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114679272587700084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177580580971944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9316deb485e48784c9556f15af4843cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoText: {fileID: 114438364969882640}
+  buttons:
+  - {fileID: 114402412267425150}
+  - {fileID: 114061797082693320}
+  - {fileID: 114026903321488716}
 --- !u!114 &114684504049882052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1491,10 +1475,10 @@ RectTransform:
   m_Father: {fileID: 224460548916526724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15.099976, y: -165.09998}
-  m_SizeDelta: {x: -522.8, y: -368.8}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15.099976, y: 122}
+  m_SizeDelta: {x: 227, y: 81.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224206051965253728
 RectTransform:
@@ -1550,8 +1534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -181}
-  m_SizeDelta: {x: 414.2, y: 49.095}
+  m_AnchoredPosition: {x: 13.8, y: 80}
+  m_SizeDelta: {x: 441.8, y: 152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224358560250569142
 RectTransform:
@@ -1683,7 +1667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -241, y: 103}
+  m_AnchoredPosition: {x: 0, y: -115}
   m_SizeDelta: {x: 414.2, y: 53.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224574697954940740
@@ -1702,7 +1686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000036597, y: 107.1}
+  m_AnchoredPosition: {x: 0.0000035577, y: -175}
   m_SizeDelta: {x: 414.2, y: 53.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224632730059638254
@@ -1798,6 +1782,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: 96}
+  m_AnchoredPosition: {x: 0, y: -235}
   m_SizeDelta: {x: 414.2, y: 53.94}
   m_Pivot: {x: 0.5, y: 0.5}

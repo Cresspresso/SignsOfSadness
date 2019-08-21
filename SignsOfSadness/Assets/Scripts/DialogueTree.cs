@@ -3,22 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueTree : MonoBehaviour
 {
     ConvNode rootNode;
     public Text infoText;
     public Button[] buttons = new Button[3];
+    public Animator animator;
     
     class ConvNode
     {
         public string prompt;
         public string[] choices = new string[3] { "", "", "" };
         public ConvNode[] options = new ConvNode[3] { null, null, null };
+        public Action onLoad = null;
     }
+
+    ConvNode goToMenuNode;
 
     void clickButton(int i)
     {
+        if (rootNode.options[i] == goToMenuNode)
+        {
+            SceneManager.LoadScene("Menu");
+        }
         rootNode = rootNode.options[i];
         loadNode();
     }
@@ -33,6 +42,11 @@ public class DialogueTree : MonoBehaviour
             var button = buttons[i];
             button.GetComponentInChildren<Text>().text = rootNode.choices[i]; // set button text
             button.interactable = rootNode.options[i] != null; // gray out button if no next node
+        }
+
+        if (rootNode.onLoad != null)
+        {
+            rootNode.onLoad();
         }
     }
     
@@ -49,6 +63,7 @@ public class DialogueTree : MonoBehaviour
         }
 
         rootNode = new ConvNode();
+        goToMenuNode = new ConvNode();
         var node02 = new ConvNode();
         var node03 = new ConvNode();
         var node04 = new ConvNode();
@@ -123,6 +138,13 @@ public class DialogueTree : MonoBehaviour
         var node73 = new ConvNode();
         var node74 = new ConvNode();
         var node75 = new ConvNode();
+        var node76 = new ConvNode();
+
+        {
+            node76.prompt = "It's good to have someone who listens.";
+            node76.choices[2] = "[Win the Game]";
+            node76.options[2] = goToMenuNode;
+        }
 
         {
             node73.prompt = "What...?";
@@ -158,6 +180,8 @@ public class DialogueTree : MonoBehaviour
             node68.options[0] = node69;
 
             node69.prompt = "I don't want to talk anymore. Leave me alone.";
+            node69.choices[2] = "[Return to Menu]";
+            node69.options[2] = goToMenuNode;
         }
 
         {
@@ -186,6 +210,8 @@ public class DialogueTree : MonoBehaviour
 
         {
             node62.prompt = "Maybe you're right.";
+            node62.choices[2] = "[End]";
+            node62.options[2] = goToMenuNode;
 
             node63.prompt = "I know, I know. But sometimes I just wish that things could be a bit easier.";
             node63.choices[0] = "...";
@@ -194,10 +220,12 @@ public class DialogueTree : MonoBehaviour
 
         {
             node60.prompt = "Maybe you're right.";
+            node60.choices[2] = "[End]";
+            node60.options[2] = goToMenuNode;
 
             node61.prompt = "Yes but for the years I have put into this company I expect some things to have reached my expectations.";
             node61.choices[0] = "...";
-            node61.options[0] = node15;
+            node61.options[0] = node18;
         }
 
         {
@@ -218,6 +246,8 @@ public class DialogueTree : MonoBehaviour
             node58.options[0] = node13;
 
             node59.prompt = "Sorry, but that's none of your business.";
+            node59.choices[0] = "...";
+            node59.options[0] = node15;
         }
 
         {
@@ -271,6 +301,8 @@ public class DialogueTree : MonoBehaviour
             node47.options[0] = node48;
 
             node48.prompt = "People like you are what's wrong with this world!";
+            node48.choices[2] = "[Return to Menu]";
+            node48.options[2] = goToMenuNode;
         }
 
         {
@@ -295,10 +327,12 @@ public class DialogueTree : MonoBehaviour
             node40.options[0] = node41;
             node40.choices[1] = "No, but I am curious.";
             node40.options[1] = node42;
-            node40.choices[2] = "No. I didn't mean it like that. You just look like you're having a rough time of it.";
+            node40.choices[2] = "No. I didn't mean it like that. You just look like you're having a rough time of it."; // TODO split
             node40.options[2] = node44;
 
             node41.prompt = "What's wrong with you? Get the hell away from me!";
+            node41.choices[2] = "[Return to Menu]";
+            node41.options[2] = goToMenuNode;
         }
 
         {
@@ -317,6 +351,8 @@ public class DialogueTree : MonoBehaviour
             node36.options[0] = node38;
 
             node38.prompt = "Go away, you're just wasting my time.";
+            node38.choices[2] = "[Return to Menu]";
+            node38.options[2] = goToMenuNode;
         }
 
         {
@@ -349,6 +385,8 @@ public class DialogueTree : MonoBehaviour
             node27.options[2] = node04;
 
             node31.prompt = "Right. Bye.";
+            node31.choices[2] = "[Return to Menu]";
+            node31.options[2] = goToMenuNode;
 
             node32.prompt = "Uh, okay?";
             node32.choices[0] = "...";
@@ -365,6 +403,8 @@ public class DialogueTree : MonoBehaviour
             node26.options[2] = node30;
 
             node28.prompt = "I have enough things to deal with, besides you coming to bother me.";
+            node28.choices[2] = "[Return to Menu]";
+            node28.options[2] = goToMenuNode;
 
             node29.prompt = "Well you didn't have to be a prick about it.";
             node29.choices[0] = "...";
@@ -377,7 +417,8 @@ public class DialogueTree : MonoBehaviour
 
         {
             node25.prompt = "Thanks for listening to me ramble.";
-            node25.choices[0] = "Anytime, sometimes we just need someone to talk to.";
+            node25.choices[2] = "Anytime. Sometimes we just need someone to talk to.";
+            node25.options[2] = node76;
         }
 
         {
@@ -429,7 +470,9 @@ public class DialogueTree : MonoBehaviour
         {
             node16.prompt = "How is this fair?";
             node16.choices[0] = "You might have to find a different company then.";
+            node16.options[0] = node60;
             node16.choices[1] = "It's not fair. But we all have to make the best of what we have.";
+            node16.options[1] = node63;
             node16.choices[2] = "Is there anyone in this company that can help you?";
             node16.options[2] = node17;
         }
@@ -449,7 +492,11 @@ public class DialogueTree : MonoBehaviour
         {
             node13.prompt = "I never imagined that I'd be struggling like this. This is not what I had in mind.";
             node13.choices[0] = "It seems like you have a decision to make.";
+            node13.options[0] = node62;
+
             node13.choices[1] = "Reality is often different from the picture in your mind.";
+            node13.options[1] = node61;
+
             node13.choices[2] = "Did you have a plan when you joined this company?";
             node13.options[2] = node14;
 
@@ -542,71 +589,16 @@ public class DialogueTree : MonoBehaviour
             node02.prompt = "Yeah, I'm okay thanks.";
             node02.choices[0] = "You don't look alright.";
             node02.options[0] = node03;
+            node02.onLoad = () => animator.SetTrigger("LookToStanding");
         }
 
         {
-            rootNode.prompt = "...";
+            rootNode.prompt = "*Crying silently*";
             rootNode.choices[0] = "Hey, are you alright?";
             rootNode.options[0] = node02;
+            rootNode.onLoad = () => animator.SetTrigger("CryingToLook");
         }
 
         loadNode();
-
-
-
-        ////node 0
-        //nodes[0] = new ConvNode();
-        //nodes[0].prompt = "...";
-        //nodes[0].options[0] = new OptionButton();
-        //nodes[0].options[1] = new OptionButton();
-        //nodes[0].options[2] = new OptionButton();
-        //nodes[0].options[0].reply = "Hey buddy, what the hell are you doing?";
-        //nodes[0].options[0].link = 1;
-        //nodes[0].options[0].effects = "effect1";
-
-        //nodes[0].options[1].reply = "Let her go or I'll call the police!";
-        //nodes[0].options[1].link = 1;
-
-        //nodes[0].options[2].reply = "Sir, I suggest you let that woman go.";
-        //nodes[0].options[2].link = 1;
-        //nodes[0].options[2].effects[0] = "effect2";
-        //nodes[0].options[2].effects[1] = "effect3";
-        //// node 1
-        //nodes[1] = new ConvNode();
-        //nodes[1].prompt = "Get away from me! I don't want to hurt her but I will. And you, if you don't walk away!";
-        //nodes[1].options[0] = new OptionButton();
-        //nodes[1].options[1] = new OptionButton();
-        //nodes[1].options[0].reply = "Take it easy, we can just talk about it. What happened?";
-        //nodes[1].options[0].link = 2;
-        //nodes[1].options[1].reply = "Be smart, man. Give up, you're not going to get away.";
-        //nodes[1].options[1].link = 2;
-        ////node 2
-        //nodes[2] = new ConvNode();
-        //nodes[2].prompt = "No! I am done talking. Talking is what I've done for the past half year. Talking is what I've been doing in court. I won't let her take my Ben.";
-        //nodes[2].options[0] = new OptionButton();
-        //nodes[2].options[1] = new OptionButton();
-        //nodes[2].options[0].reply = "Your Ben? Is he your kid? Is this woman your wife?";
-        //nodes[2].options[0].link = 3;
-        //nodes[2].options[1].reply = "Look, buddy, relax. You're not going to accomplish anything like this. Put down the gun.";
-        //nodes[2].options[1].link = 3;
-        ////node 3
-        //nodes[3] = new ConvNode();
-        //nodes[3].prompt = "Ben is... He's my son. *to woman* Hear that, bitch? MY son! *to player* She's trying to take him from me. Josh, Ben needs a better father, she said. While he was in the damn living room with us!";
-        //nodes[3].options[0] = new OptionButton();
-        //nodes[3].options[1] = new OptionButton();
-        //nodes[3].options[0].reply = "<say nothing>";
-        //nodes[3].options[0].link = 4;
-        //nodes[3].options[1].reply = "<say nothing>";
-        //nodes[3].options[1].link = 4;
-        ////node 4
-        //nodes[4] = new ConvNode();
-        //nodes[4].prompt = "Woman: You know Ben deserves better than you! This proves it, doesn't it?";
-        //nodes[4].options[0] = new OptionButton();
-        //nodes[4].options[1] = new OptionButton();
-        //nodes[4].options[0].reply = "<say nothing>";
-        //nodes[4].options[0].link = 0;
-        //nodes[4].options[1].reply = "<say nothing>";
-        //nodes[4].options[1].link = 0;
-
     }
 }

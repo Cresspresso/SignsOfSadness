@@ -9,15 +9,12 @@ public class Trigger_Dialogue : MonoBehaviour
     void Start()
     {
         UIObject.SetActive(false);
+        StartCoroutine(BeginThings());
     }
 
-    void OnTriggerEnter(Collider player)
+    IEnumerator BeginThings()
     {
-        if (player.gameObject.tag == "Player")
-        {
-            UIObject.SetActive(true);
-
-        }
-
+        yield return new WaitForSeconds(3);
+        UIObject.SetActive(true);
     }
 }
