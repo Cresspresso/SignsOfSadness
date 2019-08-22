@@ -144,7 +144,7 @@ public class DialogueTree : MonoBehaviour
             node76.prompt = "It's good to have someone who listens.";
             node76.choices[2] = "[Win the Game]";
             node76.options[2] = goToMenuNode;
-            node76.onLoad = () => animator.SetTrigger("NodYES");
+            node76.onLoad = () => animator.SetTrigger("Walkout");
         }
 
         {
@@ -184,8 +184,9 @@ public class DialogueTree : MonoBehaviour
             node68.onLoad = () => animator.SetTrigger("Cry");
 
             node69.prompt = "I don't want to talk anymore. Leave me alone.";
-            node69.choices[2] = "[Return to Menu]";
+            node69.choices[2] = "[End]";
             node69.options[2] = goToMenuNode;
+            node69.onLoad = () => animator.SetTrigger("Walkout");
         }
 
         {
@@ -318,7 +319,7 @@ public class DialogueTree : MonoBehaviour
             node47.onLoad = () => animator.SetTrigger("Cry");
 
             node48.prompt = "People like you are what's wrong with this world!";
-            node48.choices[2] = "[Return to Menu]";
+            node48.choices[2] = "[End]";
             node48.options[2] = goToMenuNode;
         }
 
@@ -357,9 +358,9 @@ public class DialogueTree : MonoBehaviour
             node40.onLoad = () => animator.SetTrigger("Crouch");
 
             node41.prompt = "What's wrong with you? Get the hell away from me!";
-            node41.choices[2] = "[Return to Menu]";
+            node41.choices[2] = "[End]";
             node41.options[2] = goToMenuNode;
-            node41.onLoad = () => animator.SetTrigger("NodYES");
+            node41.onLoad = () => animator.SetTrigger("Walkout");
         }
 
         {
@@ -380,7 +381,7 @@ public class DialogueTree : MonoBehaviour
             node36.onLoad = () => animator.SetTrigger("Cry");
 
             node38.prompt = "Go away, you're just wasting my time.";
-            node38.choices[2] = "[Return to Menu]";
+            node38.choices[2] = "[End]";
             node38.options[2] = goToMenuNode;
         }
 
@@ -417,8 +418,9 @@ public class DialogueTree : MonoBehaviour
             node27.onLoad = () => animator.SetTrigger("NodNO");
 
             node31.prompt = "Right. Bye.";
-            node31.choices[2] = "[Return to Menu]";
+            node31.choices[2] = "[End]";
             node31.options[2] = goToMenuNode;
+            node31.onLoad = () => animator.SetTrigger("Walkout");
 
             node32.prompt = "Uh, okay?";
             node32.choices[0] = "...";
@@ -436,8 +438,9 @@ public class DialogueTree : MonoBehaviour
             node26.onLoad = () => animator.SetTrigger("NodNO");
 
             node28.prompt = "I have enough things to deal with, besides you coming to bother me.";
-            node28.choices[2] = "[Return to Menu]";
+            node28.choices[2] = "[End]";
             node28.options[2] = goToMenuNode;
+            node28.onLoad = () => animator.SetTrigger("Walkout");
 
             node29.prompt = "Well you didn't have to be a prick about it.";
             node29.choices[0] = "...";
