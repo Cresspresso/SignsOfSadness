@@ -165,6 +165,7 @@ public class DialogueTree : MonoBehaviour
             node70.prompt = "Yeah... I remember that feeling.";
             node70.choices[0] = "...";
             node70.options[0] = node71;
+            node70.onLoad = () => animator.SetTrigger("NodYes");
 
             node71.prompt = "When I first joined this company, I dedicated everything to my work.";
             node71.choices[0] = "...";
@@ -173,12 +174,14 @@ public class DialogueTree : MonoBehaviour
             node72.prompt = "But even after all this time, I'm stuck at the bottom.";
             node72.choices[0] = "...";
             node72.options[0] = node15;
+            node72.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
             node68.prompt = "You're a real piece of work, you hypocrite.";
             node68.choices[0] = "...";
             node68.options[0] = node69;
+            node68.onLoad = () => animator.SetTrigger("Cry");
 
             node69.prompt = "I don't want to talk anymore. Leave me alone.";
             node69.choices[2] = "[Return to Menu]";
@@ -189,6 +192,7 @@ public class DialogueTree : MonoBehaviour
             node66.prompt = "That's what a drone would say.";
             node66.choices[0] = "...";
             node66.options[0] = node67;
+            node66.onLoad = () => animator.SetTrigger("CrouchToStand");
 
             node67.prompt = "You must be high up in the company. Are you?";
             node67.choices[0] = "Wouldn't you like to know?";
@@ -197,12 +201,14 @@ public class DialogueTree : MonoBehaviour
             node67.options[1] = node70;
             node67.choices[2] = "Enough about me. More about you.";
             node67.options[2] = node73;
+            node67.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
             node64.prompt = "I don't even know.";
             node64.choices[0] = "...";
             node64.options[0] = node65;
+            node64.onLoad = () => animator.SetTrigger("CrouchToStand");
 
             node65.prompt = "Any legal trouble would be the end of the job at any rate.";
             node65.choices[0] = "...";
@@ -229,13 +235,14 @@ public class DialogueTree : MonoBehaviour
             node61.prompt = "Yes but for the years I have put into this company I expect some things to have reached my expectations.";
             node61.choices[0] = "...";
             node61.options[0] = node18;
-            node60.onLoad = () => animator.SetTrigger("NodYesThenNo");
+            node61.onLoad = () => animator.SetTrigger("NodYesThenNo");
         }
 
         {
             node56.prompt = "It is a problem and I feel like my kids are growing up without me in their lives.";
             node56.choices[0] = "...";
             node56.options[0] = node57;
+            node56.onLoad = () => animator.SetTrigger("CrouchToStand");
 
             node57.prompt = "I feel like my wife could leave me at any moment and I wouldn't even blame her.";
             node57.choices[0] = "Oof.";
@@ -244,10 +251,12 @@ public class DialogueTree : MonoBehaviour
             node57.options[1] = node59;
             node57.choices[2] = "Have you talked to your family about this?";
             node57.options[2] = node11;
+            node57.onLoad = () => animator.SetTrigger("NodNO");
 
             node58.prompt = "Yeah.. I'm not even kidding.";
             node58.choices[0] = "...";
             node58.options[0] = node13;
+            node58.onLoad = () => animator.SetTrigger("NodYES");
 
             node59.prompt = "Sorry, but that's none of your business.";
             node59.choices[0] = "...";
@@ -266,11 +275,12 @@ public class DialogueTree : MonoBehaviour
             node54.prompt = "Yeah, well not much. I was kind of hoping for a more helpful answer.";
             node54.choices[0] = "...";
             node54.options[0] = node55;
+            node54.onLoad = () => animator.SetTrigger("Crouch");
 
             node55.prompt = "I want to spend more time with my family.";
             node55.choices[0] = "...";
             node55.options[0] = node57;
-
+            node55.onLoad = () => animator.SetTrigger("CrouchToStand");
         }
 
         {
@@ -285,6 +295,7 @@ public class DialogueTree : MonoBehaviour
             node51.prompt = "You're a strange person, you know that?";
             node51.choices[0] = "...";
             node51.options[0] = node07;
+            node51.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
@@ -299,10 +310,12 @@ public class DialogueTree : MonoBehaviour
             node46.options[1] = node49;
             node46.choices[2] = "You're right. I'm sorry.";
             node46.options[2] = node51;
+            node46.onLoad = () => animator.SetTrigger("NodNO");
 
             node47.prompt = "Well, screw you too.";
             node47.choices[0] = "...";
             node47.options[0] = node48;
+            node47.onLoad = () => animator.SetTrigger("Cry");
 
             node48.prompt = "People like you are what's wrong with this world!";
             node48.choices[2] = "[Return to Menu]";
@@ -313,12 +326,20 @@ public class DialogueTree : MonoBehaviour
             node44.prompt = "Rough is right. There's too much work, too much time away from home.";
             node44.choices[0] = "...";
             node44.options[0] = node05;
+            node44.onLoad = () =>
+            {
+                animator.SetTrigger("CrouchToStand");
+            };
         }
 
         {
             node42.prompt = "Well, at least you're honest, I guess..";
             node42.choices[0] = "...";
             node42.options[0] = node43;
+            node42.onLoad = () =>
+            {
+                animator.SetTrigger("CrouchToStand");
+            };
 
             node43.prompt = "It's rough. All this work, all this time away from home.";
             node43.choices[0] = "...";
@@ -333,16 +354,19 @@ public class DialogueTree : MonoBehaviour
             node40.options[1] = node42;
             node40.choices[2] = "No. I didn't mean it like that. You just look like you're having a rough time of it."; // TODO split
             node40.options[2] = node44;
+            node40.onLoad = () => animator.SetTrigger("Crouch");
 
             node41.prompt = "What's wrong with you? Get the hell away from me!";
             node41.choices[2] = "[Return to Menu]";
             node41.options[2] = goToMenuNode;
+            node41.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
             node37.prompt = "Hmm. Yeah, I suppose. I appreciate it.";
             node37.choices[0] = "...";
             node37.options[0] = node39;
+            node37.onLoad = () => animator.SetTrigger("NodYES");
 
             node39.prompt = "It's rough. All this work, all this time away from home.";
             node39.choices[0] = "...";
@@ -353,6 +377,7 @@ public class DialogueTree : MonoBehaviour
             node36.prompt = "Then why are we still talking?";
             node36.choices[0] = "...";
             node36.options[0] = node38;
+            node36.onLoad = () => animator.SetTrigger("Cry");
 
             node38.prompt = "Go away, you're just wasting my time.";
             node38.choices[2] = "[Return to Menu]";
@@ -367,6 +392,7 @@ public class DialogueTree : MonoBehaviour
             node35.options[1] = node40;
             node35.choices[2] = "Sometimes we all need someone to talk to.";
             node35.options[2] = node37;
+            node35.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
@@ -377,6 +403,7 @@ public class DialogueTree : MonoBehaviour
             node34.prompt = "It's rough. All this work, all this time away from home.";
             node34.choices[0] = "...";
             node34.options[0] = node05;
+            node34.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
@@ -387,6 +414,7 @@ public class DialogueTree : MonoBehaviour
             node27.options[1] = node32;
             node27.choices[2] = "Do you want to talk about it?";
             node27.options[2] = node04;
+            node27.onLoad = () => animator.SetTrigger("NodNO");
 
             node31.prompt = "Right. Bye.";
             node31.choices[2] = "[Return to Menu]";
@@ -405,6 +433,7 @@ public class DialogueTree : MonoBehaviour
             node26.options[1] = node29;
             node26.choices[2] = "Sorry, it's just that you didn't say anything.";
             node26.options[2] = node30;
+            node26.onLoad = () => animator.SetTrigger("NodNO");
 
             node28.prompt = "I have enough things to deal with, besides you coming to bother me.";
             node28.choices[2] = "[Return to Menu]";
@@ -417,12 +446,14 @@ public class DialogueTree : MonoBehaviour
             node30.prompt = "Yeah, sorry.";
             node30.choices[0] = "...";
             node30.options[0] = node04;
+            node30.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
             node25.prompt = "Thanks for listening to me ramble.";
             node25.choices[2] = "Anytime. Sometimes we just need someone to talk to.";
             node25.options[2] = node76;
+            node25.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
@@ -527,6 +558,7 @@ public class DialogueTree : MonoBehaviour
             node10.options[1] = node64;
             node10.choices[2] = "That sounds like a serious problem.";
             node10.options[2] = node56;
+            node08.onLoad = () => animator.SetTrigger("Crouch");
         }
 
         {
@@ -544,12 +576,14 @@ public class DialogueTree : MonoBehaviour
             node08.options[1] = node54;
             node08.choices[2] = "Maybe you can ask for some time off?";
             node08.options[2] = node09;
+            node08.onLoad = () => animator.SetTrigger("Cry");
         }
 
         {
             node07.prompt = "I need the money, I need to pay the bills and support my children.";
             node07.choices[0] = "...";
             node07.options[0] = node08;
+            node08.onLoad = () => animator.SetTrigger("NodYES");
         }
 
         {
@@ -566,6 +600,7 @@ public class DialogueTree : MonoBehaviour
             node05.options[1] = node06;
             node05.choices[2] = "Why are you working so much?";
             node05.options[2] = node07;
+            node08.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
@@ -587,6 +622,7 @@ public class DialogueTree : MonoBehaviour
             node03.options[1] = node27;
             node03.choices[2] = "Do you want to talk about it?";
             node03.options[2] = node04;
+            node02.onLoad = () => animator.SetTrigger("NodNO");
         }
 
         {
